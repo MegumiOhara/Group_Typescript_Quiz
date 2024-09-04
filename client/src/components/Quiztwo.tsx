@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { questionsTwo } from "./questionsT";
 import { ReactComponent as ImageOne } from "../images/thumbs-up-solid.svg";
 
+//import ImageOne from "../images/thumbs-up-solid.svg?react";
 const QuizTwo: React.FC = () => {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
   const [showScore, setShowScore] = useState<boolean>(false);
