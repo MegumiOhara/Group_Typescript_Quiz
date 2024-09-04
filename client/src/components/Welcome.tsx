@@ -16,7 +16,7 @@ const Welcome = ({ player, fontSize, backgroundColor }:WelcomeProps) => {
          <h1 className="animate__animated animate__heartBeat animate__repeat-3	3">Welcome, {player}!</h1>
          <p>This is a Quiz to test  your Swedish skills!</p>
          <p>Choose one correct answer from 4 multiple choice.</p>
-         <button><Link to="/levelpg">Choose the level</Link></button>
+         <button><Link to="/quizTwo">Choose the level</Link></button>
       </div>
     
    );
