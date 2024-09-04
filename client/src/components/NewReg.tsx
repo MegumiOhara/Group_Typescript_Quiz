@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 //the inputted player string. 
 
 const RegisterForm = ({ onRegister }) =>{
-   const [player, setPlayer] = useState('');
+   const [player, setPlayer] = useState<string>('');
    const navigate = useNavigate();
 
     const handleSubmit = (e) => {

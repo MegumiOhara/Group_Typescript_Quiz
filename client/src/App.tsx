@@ -9,7 +9,7 @@ import QuizTwo from './components/Quiztwo';
 import { useState } from 'react';
 
 function App() {
-  const [registeredName, setRegisteredName] = useState('');
+  const [registeredName, setRegisteredName] = useState<string>('');
   
   const handleRegister = (player:string) => {
     setRegisteredName(player);
