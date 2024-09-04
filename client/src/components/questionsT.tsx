@@ -102,6 +102,7 @@ type Question ={
             {answerVocab: 'Lag' , isCorrect: false},
         ],
     }
+
 ];
 
 export default questionsTwo;
