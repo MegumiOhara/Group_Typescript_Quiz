@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import questions from "./questions";
-import { ReactComponent as ImageOne } from "../images/thumbs-up-solid.svg";
+//import { ReactComponent as ImageOne } from "../images/thumbs-up-solid.svg";
 
 //import ImageOne from "../images/thumbs-up-solid.svg?react";
 const QuizTwo: React.FC = () => {
@@ -28,11 +28,11 @@ const QuizTwo: React.FC = () => {
       <div className="app">
         {showScore ? (
           <>
-            <ImageOne className="animate__animated animate__tada animate__repeat-3	3" />
+           
             <div className="score-section">
               You scored {score} out of {questions.length}
               <button>
-                <Link to="/levelpg">Go back</Link>
+                <Link to="/welcome">Go back</Link>
               </button>
             </div>
           </>
