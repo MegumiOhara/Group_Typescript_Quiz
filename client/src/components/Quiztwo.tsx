@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { questionsTwo } from "./questionsT";
+import questions from "./questions";
 import { ReactComponent as ImageOne } from "../images/thumbs-up-solid.svg";
 
 //import ImageOne from "../images/thumbs-up-solid.svg?react";
@@ -16,7 +16,7 @@ const QuizTwo: React.FC = () => {
 
     const nextQuestion = currentQuestion + 1;
 
-    if (nextQuestion < questionsTwo.length) {
+    if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     } else {
       setShowScore(true);
@@ -30,7 +30,7 @@ const QuizTwo: React.FC = () => {
           <>
             <ImageOne className="animate__animated animate__tada animate__repeat-3	3" />
             <div className="score-section">
-              You scored {score} out of {questionsTwo.length}
+              You scored {score} out of {questions.length}
               <button>
                 <Link to="/levelpg">Go back</Link>
               </button>
@@ -41,14 +41,14 @@ const QuizTwo: React.FC = () => {
             <div className="question-section">
               <div className="question-count">
                 <span>Question {currentQuestion + 1}</span>/
-                {questionsTwo.length}
+                {questions.length}
               </div>
               <div className="question-text">
-                {questionsTwo[currentQuestion].questionVocab}
+                {questions[currentQuestion].questionVocab}
               </div>
             </div>
             <div className="answer-section">
-              {questionsTwo[currentQuestion].answerOptions.map(
+              {questions[currentQuestion].answerOptions.map(
                 (answerOption, index) => (
                   <button
                     key={index}

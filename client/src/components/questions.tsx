@@ -106,5 +106,4 @@ type Question ={
     }
 ];
 
-
-export default questions;
+export default questions
