@@ -1,4 +1,17 @@
-export const questionsTwo = [
+//AsnwerOptions type describes the structure foreach answer option
+type AnswerOptions = {
+    answerVocab: string;
+    isCorrect: boolean;
+};
+//This type describes a single question, it has questionVocab property
+//and answerOptions array of type AnswerOptions[]
+type Question ={
+    questionVocab: string;
+    answerOptions: AnswerOptions[];
+};
+
+//questionsTwo is declared with the type 'Question[] because it is an array of Question objects
+ const questionsTwo: Question[] = [
     {
         questionVocab: 'Thank you',
         answerOptions: [
@@ -89,4 +102,7 @@ export const questionsTwo = [
             {answerVocab: 'Lag' , isCorrect: false},
         ],
     }
+
 ];
+
+export default questionsTwo;
