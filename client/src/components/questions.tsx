@@ -1,4 +1,19 @@
-export const questions = [
+//AsnwerOptions type describes the structure for each answer option
+type AnswerOptions = {
+    answerVocab: string;
+    isCorrect: boolean;
+};
+//This type describes a single question, it has questionVocab property
+//and answerOptions array of type AnswerOptions[]
+type Question ={
+    questionVocab: string;
+    answerOptions: AnswerOptions[];
+};
+
+
+//questionsTwo is declared with the type 'Question[] because it is an array of Question objects
+
+    const questions: Question[] = [
     {
         questionVocab: 'Vatten',
         answerOptions: [
@@ -90,3 +105,6 @@ export const questions = [
         ],
     }
 ];
+
+
+export default questions;
