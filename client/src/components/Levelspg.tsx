@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import React from "react";
 
-type LevelsProps ={
-    backgroundColor: string;
-    flex: string;
-    textColor: string;
-    margin: number;
-
-}
+//type LevelsProps ={
+//   backgroundColor: string;
+//   flex: string;
+//   textColor: string;
+//   margin: number;
+//}
+//On App.tsx add <Route path = levels
+//...fixed top-0 w-16 m-0 flex-col 
 
 function Levels() {
 
@@ -27,5 +28,3 @@ function Levels() {
 
 export default Levels
 
-//On App.tsx add <Route path = levels
-//...fixed top-0 w-16 m-0 flex-col 

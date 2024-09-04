@@ -1,4 +1,4 @@
-//AsnwerOptions type describes the structure foreach answer option
+//AsnwerOptions type describes the structure for each answer option
 type AnswerOptions = {
     answerVocab: string;
     isCorrect: boolean;
@@ -9,6 +9,7 @@ type Question ={
     questionVocab: string;
     answerOptions: AnswerOptions[];
 };
+
 
 //questionsTwo is declared with the type 'Question[] because it is an array of Question objects
 

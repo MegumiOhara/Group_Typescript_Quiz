@@ -11,7 +11,7 @@ import { useState } from 'react';
 function App() {
   const [registeredName, setRegisteredName] = useState('');
   
-  const handleRegister = (player) => {
+  const handleRegister = (player:string) => {
     setRegisteredName(player);
   };
 
@@ -23,7 +23,7 @@ function App() {
     <div>
         <Routes>
             <Route path="/" element={<RegisterForm onRegister={handleRegister} />}/>
-            <Route path="/welcome" element={<Welcome player={registeredName} />}/> 
+            <Route path="/welcome" element={<Welcome player={registeredName} fontSize= {30} backgroundColor= "navy" />}/> 
             <Route path= "/levelpg" element={<Levels />}/>
             <Route path= "/quiz" element={<Quiz />}/> 
             <Route path= "/quizTwo" element={<QuizTwo />}/>
