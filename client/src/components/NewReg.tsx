@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 //useNavigate hook to pass the string and navigate/switch to the next page. Link didn't pass on
 //the inputted player string. 
 
+
 const RegisterForm = ({ onRegister }) =>{
    const [player, setPlayer] = useState<string>('');
    const navigate = useNavigate();

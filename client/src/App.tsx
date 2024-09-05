@@ -23,7 +23,6 @@ function App() {
             <Route path="/" element={<RegisterForm onRegister={handleRegister} />}/>
             <Route path="/welcome" element={<Welcome player={registeredName} fontSize= {30} backgroundColor= "navy" />}/> 
             <Route path= "/quizTwo" element={<QuizTwo />}/>
-          
         </Routes>
         
       </div>

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import Button from './Button';
+import { useNavigate } from 'react-router-dom';
 
 
 type WelcomeProps = {
@@ -10,13 +10,18 @@ type WelcomeProps = {
 
 
 const Welcome = ({ player, fontSize, backgroundColor }:WelcomeProps) => {
+   const navigate = useNavigate();
+   const handleButtonClick =() => {
+      navigate("/quizTwo")
+   };
    return (
       
       <div style={{ fontSize, backgroundColor}}>
-         <h1 className="animate__animated animate__heartBeat animate__repeat-3	3">Welcome, {player}!</h1>
+         <h1>Welcome, {player}!</h1>
          <p>This is a Quiz to test  your Swedish skills!</p>
          <p>Choose one correct answer from 4 multiple choice.</p>
-         <button><Link to="/quizTwo">Choose the level</Link></button>
+         <Button label='Start Game' onClick={handleButtonClick}></Button>
+              
       </div>
     
    );

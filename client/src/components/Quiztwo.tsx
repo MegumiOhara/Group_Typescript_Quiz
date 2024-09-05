@@ -32,7 +32,7 @@ const QuizTwo: React.FC = () => {
             <div className="score-section">
               You scored {score} out of {questions.length}
               <button>
-                <Link to="/welcome">Go back</Link>
+                <Link to="/">Go back</Link>
               </button>
             </div>
           </>
