@@ -2,16 +2,19 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+interface RegisterFormProps {
+    onRegister: (player:string) => void
+}
 
 //useNavigate hook to pass the string and navigate/switch to the next page. Link didn't pass on
 //the inputted player string. 
 
 
-const RegisterForm = ({ onRegister }) =>{
+const RegisterForm: React.FC<RegisterFormProps> = ({ onRegister }) =>{
    const [player, setPlayer] = useState<string>('');
    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = () => {
        //e.preventDefault(); //this function is for stopping 
        //default action of submitting the form and refreshing the page. 
        //Small form so maybe no need for now. 
