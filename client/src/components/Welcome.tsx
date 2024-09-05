@@ -22,7 +22,10 @@ const Welcome = ({ player, fontSize, backgroundColor }:WelcomeProps) => {
          <p>This is a Quiz to test  your Swedish skills!</p>
          <p>Choose one correct answer from 4 multiple choice.</p>
 
+
          <Button label="Choose the level" onClick={handleButtonClick}/>
+
+
       </div>
     
    );

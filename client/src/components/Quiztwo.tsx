@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import questions from "./questions";
-import { ReactComponent as ImageOne } from "../images/thumbs-up-solid.svg";
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
 
@@ -33,10 +32,13 @@ const QuizTwo: React.FC = () => {
       <div className="app">
         {showScore ? (
           <>
-            <ImageOne className="animate__animated animate__tada animate__repeat-3	3" />
+           
             <div className="score-section">
               You scored {score} out of {questions.length}
+
               <Button label="Go back" onClick={handleButtonClick}/>
+
+
             </div>
           </>) : 
           (
