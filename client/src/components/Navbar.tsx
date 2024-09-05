@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="nav">
-      <div className="nav-title">
-        <Link to="/" className="nav-title">
-          Go Back to the Start
+    <nav className="flex justify-evenly bg-[#9abcf3]">
+      <div className=" text-base text-shadow  hover:text-[#5168be] active:text-[#09f7bc] active:text-shadow-white">
+        <Link
+          to="/"
+          className="text-base text-shadow hover:text-[#5168be] active:text-[#09f7bc] active:text-shadow-white"
+        >
+          Go Back to the Start{" "}
         </Link>
       </div>
     </nav>
