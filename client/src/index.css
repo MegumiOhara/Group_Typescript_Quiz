@@ -39,7 +39,8 @@ code {
 .quiz-btn:active {
   background-color: rgb(43, 84, 180);
 } */
-button {
+
+/* button {
   width: 250px;
   height: 46px;
   padding: 0 16px;
@@ -59,7 +60,7 @@ button:hover {
 }
 button:active {
   background-color: #0c61b5;
-}
+} */
 .register {
   background-color: #88c6ed;
   width: 450px;
