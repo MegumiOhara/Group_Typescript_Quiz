@@ -13,9 +13,13 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onRegister }) => {
   const [player, setPlayer] = useState<string>("");
   const navigate = useNavigate();
 
-  const handleSubmit = () => onRegister(player); //setting the player's name in the App component
-  navigate("/welcome"); //redirect to Welcome page after submitting
-
+  const handleSubmit = (e:React.FormEvent) => {
+    e.preventDefault(); //this function is for stopping 
+    //default action of submitting the form and refreshing the page. 
+    //Small form so maybe no need for now. 
+     onRegister(player); //setting the player's name in the App component
+     navigate('/welcome'); //redirect to Welcome page after submitting
+  }
   return (
     <div className="container">
       <h1>Let's start!</h1>
