@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from '../components/Button';
 
 
 //useNavigate hook to pass the string and navigate/switch to the next page. Link didn't pass on
@@ -10,8 +10,8 @@ const RegisterForm = ({ onRegister }) =>{
    const [player, setPlayer] = useState<string>('');
    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-       //e.preventDefault(); //this function is for stopping 
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+       e.preventDefault(); //this function is for stopping 
        //default action of submitting the form and refreshing the page. 
        //Small form so maybe no need for now. 
         onRegister(player); //setting the player's name in the App component
@@ -31,7 +31,7 @@ const RegisterForm = ({ onRegister }) =>{
                     value={player}
                     onChange={(e) => setPlayer(e.target.value)}/>
                 </label>
-                <button type="submit">Start</button>
+                <Button type="submit" label="Start" onClick={() => {}} />
             </form>
 
         </div>

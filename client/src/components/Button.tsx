@@ -1,27 +1,29 @@
 import React from 'react';
 
-// Define the Props interface for the Button component
-interface ButtonProps {
-  label: string;                   // Text to be displayed on the button
-  onClick: () => void;             // Function to call when button is clicked
+// Define the Props interface, extending the standard button attributes
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  label?: string;                   // Optional label if not passing children
+  style?: React.CSSProperties;      // Custom button styles
+  disabled?: boolean;               // If true, disables the button
   type?: 'button' | 'submit' | 'reset';  // Button type attribute
-  disabled?: boolean;              // If true, disables the button
-  style?: React.CSSProperties;     // Custom buttom styles
+  onClick: () => void;              // Click handler
 }
 
 // Create the Button component
-const Button: React.FC<ButtonProps> = ({ 
-  label, 
-  onClick, 
-  type = 'button',  // Default to 'button' type
-  disabled = false, // Default to enabled button
-  style 
+const Button: React.FC<ButtonProps> = ({
+  label,
+  children,                  // Allow both label and children
+  type = 'button',            // Default type is 'button'
+  onClick,
+  disabled = false,           // Default to enabled button
+  style,
+  ...props                    // Spread any other button props (e.g., className)
 }) => {
   return (
-    <button 
-      type={type} 
-      onClick={onClick} 
-      disabled={disabled} 
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
       style={{
         padding: '10px 20px',
         fontSize: '16px',
@@ -30,10 +32,11 @@ const Button: React.FC<ButtonProps> = ({
         border: 'none',
         borderRadius: '4px',
         cursor: disabled ? 'not-allowed' : 'pointer',
-        ...style  // Apply any additional custom styles passed via props
+        ...style  // Merge any custom styles passed via props
       }}
+      {...props}  // Spread any additional props like className
     >
-      {label}
+      {label || children}  {/* If label exists, use it, otherwise render children */}
     </button>
   );
 }
