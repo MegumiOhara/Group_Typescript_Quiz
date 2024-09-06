@@ -36,8 +36,8 @@ const QuizTwo: React.FC = () => {
             <div className="score-section">
               You scored {score} out of {questions.length}
 
-              <Button label="Go back" onClick={handleButtonClick}/>
 
+              <Button label="Go back" onClick={handleButtonClick}/>
 
             </div>
           </>) : 
