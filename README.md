@@ -20,18 +20,25 @@ f.	Levels page (mainly only styling) by Megumi
 g.	Registration by Megumi 
 h.	README by Dawn  
 
-Others:
+Others: 
 a.	Component Developer (double checking in the end if the Quiz works with the components) by Megumi  
 b.	TypeScript Specialist (double checking if TS are correct in the end) by the team 
 c.	Styling Expert (check if styling is correct and consistent on coding and on page) by Yui and Megumi  
 
 IV.	Any challenges we face and how we overcame it
 
-The .gitignore
+**The .gitignore**
 We faced several challenges while working on this project. Megumi initially published the repository on GitHub, and we created individual branches for our assigned tasks. However, when we cloned the repository using GitHub Desktop and opened it in Visual Studio Code, we encountered numerous errors due to the missing node_modules folder inside the client directory. This folder is crucial for maintaining the project structure and tracking tool configurations. To resolve the issue, we consulted our instructor, who advised us to include a .gitignore file in the GitHub project and it works!
 
-The Button Components
+**The Button Components**
 Dawn encountered difficulties when declaring and importing the button component in various individual components. In Welcome.tsx, an error occurred with the button component. To fix the error, we imported useNavigate to handle navigation to the next page of the game and the button component finally works in Welcome.tsx!
+
+**Tailwind css in Button Component**
+Yui discovered that the button component wasn't being used by the other individual components. Instead, they were relying on the styles from index.css. We all wondered why this was happening. After some investigation, we found that the project was still recognizing and applying index.css styles, even though we hadn't explicitly imported it. This was because it had been installed globally in the project folder. Yui suggested switching to Tailwind CSS for styling, and Megumi proposed using className to ensure the project recognizes Tailwind CSS in Button component instead of index.css. After a brainstorming session and some hands-on work, we successfully updated the project to use the button component styled with Tailwind CSS.
+
+**Tailwind css button not centered**
+One of the pages in our project had buttons that weren’t centered. As usual, we shared advice, conducted research, and learned together. In the end, Yui resolved the issue on the quizTwo page by applying Tailwind CSS classes, including flex, justify-center, min-h-200, min-h-min, and items-center, to properly center the buttons.
+
 
 ----
 
