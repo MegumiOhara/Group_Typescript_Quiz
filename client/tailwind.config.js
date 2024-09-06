@@ -11,6 +11,9 @@ export default {
       minHeight: {
         quiz: "80vh",
       },
+      width: {
+        size: "450px",
+      },
     },
   },
   plugins: [
@@ -27,6 +30,9 @@ export default {
         },
         ".min-height-quiz": {
           minHeight: "80vh",
+        },
+        ".width-size": {
+          width: "450px",
         },
       };
       addUtilities(newUtilities);
