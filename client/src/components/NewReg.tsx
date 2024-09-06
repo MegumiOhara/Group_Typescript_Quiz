@@ -21,13 +21,13 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onRegister }) => {
      navigate('/welcome'); //redirect to Welcome page after submitting
   }
   return (
-    <div className="container">
-      <h1>Let's start!</h1>
-      <form className="container-f" onSubmit={handleSubmit}>
-        <label className="label-f">
+    <div className="m-11 p-6 h-72 max-w-md mx-auto bg-blue-300 leading-10 rounded-xl shadow-md flex flex-col justify-evenly items-center">
+      <p className= " text-white font-semibold text-2xl drop-shadow-xl">Let's start!</p>
+      <form className="flex flex-column flex-wrap justify-center" onSubmit={handleSubmit}>
+        <label className="text-white text-shadow p-5">
           Player Name:
           <input
-            className="input-f"
+            className="ml-1 bg-[#dcecf7] text-black rounded-md focus:bg-indigo-100 hover:bg-sky-200"
             type="text"
             value={player}
             onChange={(e) => setPlayer(e.target.value)}
