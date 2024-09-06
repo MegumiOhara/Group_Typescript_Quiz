@@ -21,32 +21,29 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
 }) => {
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      disabled={disabled}
-
-
-      className={
-        `px-4 py-2 
+    <div className="flex flex-col item-center justify-center py-3">
+      <button
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
+        className={`
+         py-3 px-10
          bg-blue-700 
          text-white 
          rounded-md 
          hover:bg-blue-500
-         w-9/12 
          h-46 
          cursor-pointer 
          shadow-xl 
-         uppercase 
-         my-10 
-         inline-block ${
-        disabled ? 'opacity-50 cursor-not-allowed' : ''
-
-      } ${className}`} // Merge custom className with default Tailwind classes
-    >
-      {label || children}{" "}
-      {/* If label exists, use it, otherwise render children */}
-    </button>
+         uppercase
+         inline-block 
+         items-center
+         ${disabled ? "opacity-50 cursor-not-allowed" : ""} ${className}`} // Merge custom className with default Tailwind classes
+      >
+        {label || children}{" "}
+        {/* If label exists, use it, otherwise render children */}
+      </button>
+    </div>
   );
 };
 
