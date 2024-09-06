@@ -30,7 +30,19 @@ const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       disabled={disabled}
 
-      className={`px-4 py-2 bg-blue-0 text-white rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-300 ${
+      className={
+        `px-4 py-2 
+         bg-blue-700 
+         text-white 
+         rounded-md 
+         hover:bg-blue-500
+         w-9/12 
+         h-46 
+         cursor-pointer 
+         shadow-xl 
+         uppercase 
+         my-10 
+         inline-block ${
         disabled ? 'opacity-50 cursor-not-allowed' : ''
       } ${className}`} // Merge custom className with default Tailwind classes
     >  
