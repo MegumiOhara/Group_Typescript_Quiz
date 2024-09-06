@@ -29,7 +29,7 @@ const QuizTwo: React.FC = () => {
 
   return (
     <div className="flex justify-center flex-col items-center min-height-quiz">
-      <div className="bg-[#88c6ed]  min-h-200 min-h-min rounded-2xl p-20 shadow-lg flex flex-col justify-evenly text-white">
+      <div className="bg-[#88c6ed]  min-h-200 min-h-min rounded-2xl p-20 shadow-lg flex flex-col justify-evenly text-white width-size">
         {showScore ? (
           <>
             <div className="flex flex-col items-center justify-around text-2xl">
