@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className=" text-base text-shadow  hover:text-[#5168be] active:text-[#09f7bc] active:text-shadow-white">
         <Link
           to="/"
-          className="text-base text-shadow hover:text-[#5168be] active:text-[#09f7bc] active:text-shadow-white"
+          className="text-base text-white text-shadow hover:text-[#5168be] active:text-[#09f7bc] active:text-shadow-white"
         >
           Go Back to the Start{" "}
         </Link>
