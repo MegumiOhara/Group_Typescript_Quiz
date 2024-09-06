@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from '../components/Button';
 
 interface RegisterFormProps {
     onRegister: (player:string) => void
@@ -14,10 +14,8 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onRegister }) =>{
    const [player, setPlayer] = useState<string>('');
    const navigate = useNavigate();
 
-    const handleSubmit = () => {
-       //e.preventDefault(); //this function is for stopping 
-       //default action of submitting the form and refreshing the page. 
-       //Small form so maybe no need for now. 
+
+    const handleSubmit = () => 
         onRegister(player); //setting the player's name in the App component
         navigate('/welcome'); //redirect to Welcome page after submitting
         
@@ -35,7 +33,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onRegister }) =>{
                     value={player}
                     onChange={(e) => setPlayer(e.target.value)}/>
                 </label>
-                <button type="submit">Start</button>
+                <Button type="submit" label="Start" onClick={() => {}} />
             </form>
 
         </div>
