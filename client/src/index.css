@@ -90,30 +90,3 @@ h1 {
   text-shadow: 1px 1px 2px black;
   margin: 0;
 }
-.container-f {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 15px;
-}
-.label-f {
-  font-size: larger;
-  padding: 10px;
-  color: white;
-  font-size: larger;
-  text-shadow: 1px 1px 2px black;
-  margin-left: 5px;
-}
-.input-f {
-  padding: 5px;
-  margin-left: 5px;
-  background-color: #dcecf7;
-}
-.input-f:focus {
-  background-color: #accbea;
-  outline: #5168be;
-}
-.input-f:hover {
-  background-color: #cbe9fc;
-}
