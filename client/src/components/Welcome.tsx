@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import Button from '../components/Button'; //need to import the reusable button here to call the styling from the component of Button.tsx
 import { useNavigate } from 'react-router-dom';
@@ -28,10 +29,13 @@ const Welcome = ({ player }:WelcomeProps) => {
       </div>
      
    );
+
 };
 
 export default Welcome;
 
 
+
 //on App.tsx add 
 // <Route path="/welcome" element={<Welcome player={registeredName} fontSize= {30} backgroundColor= "navy" />}/>
+

@@ -1,3 +1,4 @@
+
 import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import Welcome from './components/Welcome';
 import RegisterForm from './components/NewReg';
@@ -5,28 +6,30 @@ import Navbar from './components/Navbar';
 import QuizTwo from './components/Quiztwo';
 import { useState } from 'react';
 
+
 function App() {
-  const [registeredName, setRegisteredName] = useState<string>('');
-  
-  const handleRegister = (player:string) => {
+  const [registeredName, setRegisteredName] = useState<string>("");
+
+  const handleRegister = (player: string) => {
     setRegisteredName(player);
   };
 
   return (
     <BrowserRouter>
-    <div>
-      <Navbar />
-    </div>
-    <div>
+      <div>
+        <Navbar />
+      </div>
+      <div>
         <Routes>
+
             <Route path="/" element={<RegisterForm onRegister={handleRegister} />}/>
             <Route path="/welcome" element={<Welcome player={registeredName}/>}/> 
             <Route path= "/quizTwo" element={<QuizTwo />}/>
+
         </Routes>
-        
       </div>
-    </BrowserRouter> 
+    </BrowserRouter>
   );
 }
 
-export default App
+export default App;
