@@ -21,6 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
 }) => {
   return (
+
     <div className="flex flex-col item-center justify-center py-3">
       <button
         type={type}
@@ -28,6 +29,7 @@ const Button: React.FC<ButtonProps> = ({
         disabled={disabled}
         className={`
          py-3 px-10
+
          bg-blue-700 
          text-white 
          rounded-md 
