@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import questions from "./questions";
-import Button from '../components/Button';
-import { useNavigate } from 'react-router-dom';
+import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 //import ImageOne from "../images/thumbs-up-solid.svg?react";
 const QuizTwo: React.FC = () => {
@@ -10,8 +10,8 @@ const QuizTwo: React.FC = () => {
   const [score, setScore] = useState<number>(0);
   const navigate = useNavigate();
   const handleButtonClick = () => {
-     navigate("/Welcome");
-    }
+    navigate("/Welcome");
+  };
 
   const answerButtonClick = (isCorrect: boolean) => {
     if (isCorrect === true) {
@@ -28,35 +28,34 @@ const QuizTwo: React.FC = () => {
   };
 
   return (
-    <div className="container">
-      <div className="app">
+    <div className="flex justify-center flex-col items-center min-height-quiz">
+      <div className="bg-[#88c6ed]  min-h-200 min-h-min rounded-2xl p-20 shadow-lg flex flex-col justify-evenly text-white">
         {showScore ? (
           <>
-           
-            <div className="score-section">
+            <div className="flex flex-col items-center justify-around text-2xl">
               You scored {score} out of {questions.length}
-
-
-              <Button label="Go back" onClick={handleButtonClick}/>
-
+              <Button label="Go back" onClick={handleButtonClick} />
             </div>
-          </>) : 
-          (
+          </>
+        ) : (
           <>
-            <div className="question-section">
-              <div className="question-count">
-                <span>Question {currentQuestion + 1}</span>/
-                {questions.length}
+            <div className="size-full relative">
+              <div className="mb-20">
+                <span className="text-2xl">Question {currentQuestion + 1}</span>
+                /{questions.length}
               </div>
-              <div className="question-text">
+              <div className="mb-12 text-center text-3xl text-shadow-black">
                 {questions[currentQuestion].questionVocab}
               </div>
             </div>
-            <div className="answer-section">
+            <div className="size-full flex flex-col">
               {questions[currentQuestion].answerOptions.map(
                 (answerOption, index) => (
-                  <Button key={index} label={answerOption.answerVocab} onClick={() => answerButtonClick(answerOption.isCorrect)} />
-
+                  <Button
+                    key={index}
+                    label={answerOption.answerVocab}
+                    onClick={() => answerButtonClick(answerOption.isCorrect)}
+                  />
                 )
               )}
             </div>
